@@ -1,5 +1,5 @@
 #Simran created this file
-from django.http import HttpResponse
+from django.http import HttpResponse, request
 from django.shortcuts import render
 
 # def index(request):
@@ -43,6 +43,8 @@ def analyze(request):
         return HttpResponse("Error")
     # return HttpResponse("<h2>remove punctuation</h2><a href='http://127.0.0.1:8000/'>Back to home</a>")
 
+def about(request):
+    return render(request, 'about.html')
 # def capfirst(request):
 #     return HttpResponse("<h2>capitalize first</h2><a href='http://127.0.0.1:8000/'>Back to home</a>")
 
